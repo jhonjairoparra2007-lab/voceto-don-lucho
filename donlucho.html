@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Don Lucho — La Salchipapería · Cali</title>
+<link rel="stylesheet" href="donlucho.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Bebas+Neue&family=Kalam:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ══ HUMO ANIMADO ══ -->
+<div class="humo-layer" id="humoLayer"></div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav-lucho" id="navLucho">
+  <div class="nl-logo">
+    <div class="nl-icon">🍟</div>
+    <div>
+      <span class="nl-name">DON LUCHO</span>
+      <span class="nl-sub">La Salchipapería</span>
+    </div>
+  </div>
+  <div class="nl-links">
+    <a href="#inicio"     class="nl-link">Inicio</a>
+    <a href="#menu"       class="nl-link">El Menú</a>
+    <a href="#constructor" class="nl-link">Arma la tuya</a>
+    <a href="#granizados" class="nl-link">Granizados</a>
+    <a href="#domicilio"  class="nl-link">Domicilio</a>
+    <a href="#nosotros"   class="nl-link">Nosotros</a>
+  </div>
+  <div class="nl-right">
+    <div class="nl-badge" id="nlBadge">🟢 Abierto</div>
+    <button class="nl-cta" onclick="document.getElementById('domicilio').scrollIntoView({behavior:'smooth'})">
+      🛵 Pedir Ahora
+    </button>
+    <button class="nl-ham" id="nlHam"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="nl-mob" id="nlMob">
+  <a href="#inicio"      onclick="closeMob()">Inicio</a>
+  <a href="#menu"        onclick="closeMob()">El Menú</a>
+  <a href="#constructor" onclick="closeMob()">Arma la tuya</a>
+  <a href="#granizados"  onclick="closeMob()">Granizados</a>
+  <a href="#domicilio"   onclick="closeMob()">Domicilio</a>
+  <a href="#nosotros"    onclick="closeMob()">Nosotros</a>
+</div>
+
+<!-- ══════════════════════════
+     HERO / INICIO
+══════════════════════════ -->
+<section class="section-hero" id="inicio">
+  <!-- Fondo tipo tabla de madera con manchas -->
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <!-- Letrero principal -->
+    <div class="letrero-principal">
+      <div class="lp-cinta-top">🌶 DESDE 1994 · CALI, COLOMBIA 🌶</div>
+      <h1 class="lp-titulo">
+        <span class="lpt-don">DON</span>
+        <span class="lpt-lucho">LUCHO</span>
+      </h1>
+      <div class="lp-subtitulo">LA SALCHIPAPERÍA</div>
+      <div class="lp-separador">— ✦ —</div>
+      <p class="lp-lema">
+        "La más rica del barrio.<br/>
+        La más honesta del Valle."
+      </p>
+    </div>
+
+    <!-- Producto estrella animado -->
+    <div class="producto-estrella">
+      <div class="pe-plato">
+        <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" class="pe-svg" id="heroSvg">
+          <!-- Plato / vasito de cartón -->
+          <ellipse cx="160" cy="240" rx="130" ry="22" fill="#b8860b" opacity="0.3"/>
+          <!-- Vaso de cartón -->
+          <path d="M70 260 L90 120 L230 120 L250 260Z" fill="#e8c84a" stroke="#c8a030" stroke-width="2"/>
+          <path d="M70 260 L90 120" stroke="#c8a030" stroke-width="1.5"/>
+          <path d="M250 260 L230 120" stroke="#c8a030" stroke-width="1.5"/>
+          <!-- Rayas del vasito -->
+          <line x1="80" y1="175" x2="240" y2="175" stroke="#c8a030" stroke-width="1" opacity="0.5"/>
+          <line x1="75" y1="215" x2="245" y2="215" stroke="#c8a030" stroke-width="1" opacity="0.5"/>
+          <!-- Texto vasito -->
+          <text x="160" y="200" text-anchor="middle" font-family="'Bebas Neue'" font-size="18" fill="#8b6914" opacity="0.7">DON LUCHO</text>
+          <!-- Papas fritas -->
+          <g class="papas-anim">
+            <!-- Papa 1 -->
+            <rect x="95" y="60" width="14" height="70" rx="4" fill="#f0b832" stroke="#c8901a" stroke-width="1.5" transform="rotate(-8 102 95)"/>
+            <!-- Papa 2 -->
+            <rect x="118" y="45" width="14" height="80" rx="4" fill="#e8a820" stroke="#c8901a" stroke-width="1.5" transform="rotate(-2 125 85)"/>
+            <!-- Papa 3 -->
+            <rect x="142" y="38" width="14" height="85" rx="4" fill="#f0b832" stroke="#c8901a" stroke-width="1.5" transform="rotate(3 149 80)"/>
+            <!-- Papa 4 -->
+            <rect x="167" y="44" width="14" height="78" rx="4" fill="#e8a820" stroke="#c8901a" stroke-width="1.5" transform="rotate(6 174 83)"/>
+            <!-- Papa 5 -->
+            <rect x="192" y="58" width="14" height="66" rx="4" fill="#f0b832" stroke="#c8901a" stroke-width="1.5" transform="rotate(10 199 91)"/>
+          </g>
+          <!-- Salchichas -->
+          <!-- Salchicha 1 -->
+          <ellipse cx="130" cy="118" rx="22" ry="9" fill="#c83a2a" stroke="#a02818" stroke-width="1.5" transform="rotate(-15 130 118)"/>
+          <ellipse cx="130" cy="118" rx="18" ry="6" fill="#d84a38" transform="rotate(-15 130 118)"/>
+          <!-- Salchicha 2 -->
+          <ellipse cx="185" cy="122" rx="22" ry="9" fill="#c83a2a" stroke="#a02818" stroke-width="1.5" transform="rotate(20 185 122)"/>
+          <ellipse cx="185" cy="122" rx="18" ry="6" fill="#d84a38" transform="rotate(20 185 122)"/>
+          <!-- Salchicha 3 -->
+          <ellipse cx="160" cy="112" rx="22" ry="9" fill="#c83a2a" stroke="#a02818" stroke-width="1.5" transform="rotate(5 160 112)"/>
+          <ellipse cx="160" cy="112" rx="18" ry="6" fill="#d84a38" transform="rotate(5 160 112)"/>
+          <!-- Salsas: ketchup zigzag -->
+          <path d="M100 108 Q115 100 130 108 Q145 116 160 108 Q175 100 190 108 Q205 116 220 108" fill="none" stroke="#c81a0a" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+          <!-- Mostaza zigzag -->
+          <path d="M105 118 Q120 110 135 118 Q150 126 165 118 Q180 110 195 118 Q210 126 215 118" fill="none" stroke="#e8c80a" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+          <!-- Mayonesa -->
+          <path d="M108 125 Q125 118 145 125 Q165 132 185 125 Q200 120 210 125" fill="none" stroke="#fffde8" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <!-- Humo animado de las papas -->
+          <g opacity="0.4">
+            <path d="M140 40 Q135 30 140 18 Q145 6 140 -2" fill="none" stroke="#ddd" stroke-width="2" stroke-linecap="round">
+              <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M160 34 Q155 22 160 10 Q165 -2 160 -10" fill="none" stroke="#ddd" stroke-width="2" stroke-linecap="round">
+              <animate attributeName="opacity" values="0.3;0;0.3" dur="2.5s" repeatCount="indefinite"/>
+            </path>
+            <path d="M180 40 Q185 28 180 16 Q175 4 180 -4" fill="none" stroke="#ddd" stroke-width="2" stroke-linecap="round">
+              <animate attributeName="opacity" values="0.35;0;0.35" dur="3s" repeatCount="indefinite"/>
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="pe-badge-precio">Desde<br/><span>$8.000</span></div>
+    </div>
+
+    <!-- Info rápida -->
+    <div class="hero-info">
+      <div class="hi-item">
+        <span class="hi-icon">⏰</span>
+        <div>
+          <strong>Horario</strong>
+          <span>Lun–Dom 12PM–11PM</span>
+        </div>
+      </div>
+      <div class="hi-sep">·</div>
+      <div class="hi-item">
+        <span class="hi-icon">📍</span>
+        <div>
+          <strong>Ubicación</strong>
+          <span>Cra 8 #38-20 · Alameda</span>
+        </div>
+      </div>
+      <div class="hi-sep">·</div>
+      <div class="hi-item">
+        <span class="hi-icon">🛵</span>
+        <div>
+          <strong>Domicilio</strong>
+          <span>30–45 min</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-btns">
+      <button class="btn-lucho" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        🍟 Ver el Menú Completo
+      </button>
+      <button class="btn-ghost-lucho" onclick="document.getElementById('constructor').scrollIntoView({behavior:'smooth'})">
+        ⚗️ Arma Tu Salchipapa
+      </button>
+    </div>
+
+    <!-- Contadores tipo rótulo -->
+    <div class="rotulo-stats">
+      <div class="rs-item">
+        <span class="rs-n" data-target="30">0</span>
+        <span class="rs-l">años en el barrio</span>
+      </div>
+      <div class="rs-sep">|</div>
+      <div class="rs-item">
+        <span class="rs-n" data-target="11">0</span>
+        <span class="rs-l">salsas disponibles</span>
+      </div>
+      <div class="rs-sep">|</div>
+      <div class="rs-item">
+        <span class="rs-n" data-target="4200">0</span>
+        <span class="rs-l">salchipapas/mes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     FRASE FLOTANTE
+══════════════════════════ -->
+<div class="franja-frase">
+  <div class="ff-scroll" id="ffScroll">
+    🍟 SALCHIPAPA ESPECIAL &nbsp;·&nbsp; 🌶 CON TODO EL SABOR &nbsp;·&nbsp; 🧊 GRANIZADOS FRÍOS &nbsp;·&nbsp; 🛵 A DOMICILIO &nbsp;·&nbsp; ❤️ HECHO CON AMOR CALEÑO &nbsp;·&nbsp; 🍟 SALCHIPAPA ESPECIAL &nbsp;·&nbsp; 🌶 CON TODO EL SABOR &nbsp;·&nbsp; 🧊 GRANIZADOS FRÍOS &nbsp;·&nbsp; 🛵 A DOMICILIO &nbsp;·&nbsp;
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     EL MENÚ
+══════════════════════════ -->
+<section class="section-menu" id="menu">
+  <div class="container">
+    <div class="titulo-seccion">
+      <div class="ts-icono">🍟</div>
+      <h2>El Menú de Don Lucho</h2>
+      <p>Todo preparado al momento. Nada de recalentado.</p>
+    </div>
+
+    <!-- Tabs categorías -->
+    <div class="menu-tabs" id="menuTabs"></div>
+
+    <!-- Menú tipo pizarrón de restaurante de barrio -->
+    <div class="pizarron-menu" id="pizarronMenu"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     CONSTRUCTOR DE SALCHIPAPA
+══════════════════════════ -->
+<section class="section-constructor" id="constructor">
+  <div class="container">
+    <div class="titulo-seccion dark">
+      <div class="ts-icono">⚗️</div>
+      <h2>Arma Tu Salchipapa</h2>
+      <p>Tú mandas. Elige todo a tu gusto y el precio se actualiza solo.</p>
+    </div>
+
+    <div class="constructor-layout">
+      <!-- Panel de opciones -->
+      <div class="panel-opciones">
+
+        <!-- Paso 1: Tamaño -->
+        <div class="paso-constructor">
+          <div class="pc-titulo"><span class="pc-num">01</span> ¿De qué tamaño?</div>
+          <div class="pc-opciones" id="poTamanio"></div>
+        </div>
+
+        <!-- Paso 2: Tipo de papa -->
+        <div class="paso-constructor">
+          <div class="pc-titulo"><span class="pc-num">02</span> ¿Qué tipo de papa?</div>
+          <div class="pc-opciones" id="poTipoPapa"></div>
+        </div>
+
+        <!-- Paso 3: Salchicha -->
+        <div class="paso-constructor">
+          <div class="pc-titulo"><span class="pc-num">03</span> ¿Cuántas salchichas? <small>(opcionales)</small></div>
+          <div class="pc-qty-row">
+            <button class="pc-qty-btn" onclick="cambiarSalchicha(-1)">−</button>
+            <span class="pc-qty-num" id="cantSalchicha">2</span>
+            <button class="pc-qty-btn" onclick="cambiarSalchicha(1)">+</button>
+            <span class="pc-qty-label">salchichas (+$1.500 c/u)</span>
+          </div>
+        </div>
+
+        <!-- Paso 4: Salsas -->
+        <div class="paso-constructor">
+          <div class="pc-titulo"><span class="pc-num">04</span> Las salsas <small>(escoge las que quieras)</small></div>
+          <div class="salsas-grid" id="salsasGrid"></div>
+        </div>
+
+        <!-- Paso 5: Extras -->
+        <div class="paso-constructor">
+          <div class="pc-titulo"><span class="pc-num">05</span> ¿Le agrega algo más?</div>
+          <div class="extras-grid" id="extrasGrid"></div>
+        </div>
+      </div>
+
+      <!-- Panel resultado -->
+      <div class="panel-resultado">
+        <div class="pr-header">🍟 Tu Salchipapa</div>
+        <!-- SVG del producto en tiempo real -->
+        <div class="pr-producto" id="prProducto">
+          <div class="pr-svg-wrap">
+            <svg viewBox="0 0 260 230" xmlns="http://www.w3.org/2000/svg" class="pr-svg" id="prSvg">
+              <!-- Vaso -->
+              <path d="M55 220 L72 100 L188 100 L205 220Z" fill="#e8c84a" stroke="#c8a030" stroke-width="2"/>
+              <text x="130" y="168" text-anchor="middle" font-family="'Bebas Neue'" font-size="14" fill="#8b6914" opacity="0.7">DON LUCHO</text>
+              <!-- Papas placeholder -->
+              <g id="prPapas">
+                <rect x="80" y="50" width="12" height="58" rx="3" fill="#f0b832" stroke="#c8901a" stroke-width="1.5" transform="rotate(-8 86 79)"/>
+                <rect x="100" y="40" width="12" height="66" rx="3" fill="#e8a820" stroke="#c8901a" stroke-width="1.5" transform="rotate(-2 106 73)"/>
+                <rect x="121" y="35" width="12" height="70" rx="3" fill="#f0b832" stroke="#c8901a" stroke-width="1.5" transform="rotate(3 127 70)"/>
+                <rect x="143" y="40" width="12" height="64" rx="3" fill="#e8a820" stroke="#c8901a" stroke-width="1.5" transform="rotate(7 149 72)"/>
+                <rect x="163" y="50" width="12" height="54" rx="3" fill="#f0b832" stroke="#c8901a" stroke-width="1.5" transform="rotate(11 169 77)"/>
+              </g>
+              <!-- Salchichas placeholder -->
+              <g id="prSalchichas">
+                <ellipse cx="118" cy="100" rx="20" ry="8" fill="#c83a2a" stroke="#a02818" stroke-width="1.5" transform="rotate(-12 118 100)"/>
+                <ellipse cx="152" cy="102" rx="20" ry="8" fill="#c83a2a" stroke="#a02818" stroke-width="1.5" transform="rotate(15 152 102)"/>
+              </g>
+              <!-- Salsas placeholder -->
+              <g id="prSalsas"></g>
+            </svg>
+          </div>
+        </div>
+        <!-- Resumen -->
+        <div class="pr-resumen" id="prResumen">
+          <div class="prr-row"><span>Tamaño:</span><strong id="prTamano">—</strong></div>
+          <div class="prr-row"><span>Papa:</span><strong id="prPapa">—</strong></div>
+          <div class="prr-row"><span>Salchichas:</span><strong id="prSalch">0</strong></div>
+          <div class="prr-row"><span>Salsas:</span><strong id="prSalsasList">Ninguna</strong></div>
+          <div class="prr-row"><span>Extras:</span><strong id="prExtrasList">Ninguno</strong></div>
+          <div class="prr-total">
+            <span>TOTAL:</span>
+            <strong id="prTotal">$0</strong>
+          </div>
+        </div>
+        <button class="btn-lucho" style="width:100%;justify-content:center;margin-top:12px" onclick="agregarAlCarrito()">
+          🛒 Agregar al Pedido
+        </button>
+        <button class="btn-ghost-lucho" style="width:100%;justify-content:center;margin-top:8px" onclick="resetConstructor()">
+          🔄 Empezar de nuevo
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     GRANIZADOS
+══════════════════════════ -->
+<section class="section-granizados" id="granizados">
+  <div class="container">
+    <div class="titulo-seccion">
+      <div class="ts-icono">🧊</div>
+      <h2>Los Granizados</h2>
+      <p>El complemento perfecto. Frescos, frutales y bien cargados de sabor.</p>
+    </div>
+    <div class="granizados-grid" id="granizadosGrid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════
+     DOMICILIO / PEDIDO
+══════════════════════════ -->
+<section class="section-domicilio" id="domicilio">
+  <div class="container">
+    <div class="titulo-seccion dark">
+      <div class="ts-icono">🛵</div>
+      <h2>Pide a Domicilio</h2>
+      <p>Llega caliente. Lo garantizamos.</p>
+    </div>
+
+    <!-- Info strips -->
+    <div class="dom-strips">
+      <div class="dst"><span>⏱</span><strong>30–45 min</strong><em>tiempo promedio</em></div>
+      <div class="dst"><span>📍</span><strong>Alameda · Versalles · Granada · El Peñón · San Antonio</strong><em>zonas de cobertura</em></div>
+      <div class="dst"><span>🛵</span><strong>Gratis +$25.000</strong><em>envío gratuito</em></div>
+      <div class="dst"><span>🕐</span><strong>12PM – 10:30PM</strong><em>horario de domicilios</em></div>
+    </div>
+
+    <div class="domicilio-layout">
+      <!-- Carrito de productos -->
+      <div class="carrito-wrap">
+        <div class="cw-titulo">🍟 Tu Pedido</div>
+
+        <!-- Productos rápidos para domicilio -->
+        <div class="productos-rapidos" id="productosRapidos"></div>
+
+        <!-- Carrito -->
+        <div class="carrito-box" id="carritoBox">
+          <div class="cb-empty" id="cbEmpty">
+            <span>🍟</span>
+            <p>Tu carrito está vacío.<br/>¡Agrega algo rico!</p>
+          </div>
+          <div class="cb-items" id="cbItems"></div>
+          <div class="cb-totales" id="cbTotales" style="display:none">
+            <div class="cbt-row"><span>Subtotal</span><strong id="cbtSub">$0</strong></div>
+            <div class="cbt-row"><span>Domicilio</span><strong id="cbtDom">$3.000</strong></div>
+            <div class="cbt-row total"><span>TOTAL</span><strong id="cbtTotal">$0</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario de entrega -->
+      <div class="form-entrega">
+        <div class="fe-titulo">📋 Datos de Entrega</div>
+        <div class="fe-campos">
+          <div class="fc-field">
+            <label>Nombre</label>
+            <input type="text"  id="pedNombre"    placeholder="¿A nombre de quién?"    class="lucho-input"/>
+          </div>
+          <div class="fc-field">
+            <label>Teléfono / WhatsApp</label>
+            <input type="tel"   id="pedTelefono"  placeholder="3XX XXX XXXX"           class="lucho-input"/>
+          </div>
+          <div class="fc-field">
+            <label>Dirección</label>
+            <input type="text"  id="pedDireccion" placeholder="Calle, carrera, número" class="lucho-input"/>
+          </div>
+          <div class="fc-field">
+            <label>Barrio</label>
+            <input type="text"  id="pedBarrio"    placeholder="¿En qué barrio?"        class="lucho-input"/>
+          </div>
+          <div class="fc-field" style="grid-column:1/-1">
+            <label>Indicaciones</label>
+            <textarea id="pedNota" placeholder="Apto, torre, referencia... o algo especial para su pedido" class="lucho-input" rows="2"></textarea>
+          </div>
+        </div>
+
+        <!-- MÉTODO DE PAGO -->
+        <div class="metodo-pago">
+          <div class="mp-titulo">💳 Método de Pago</div>
+          <div class="mp-opciones">
+            <div class="mpo" id="mpo-efectivo"   onclick="selMetodoPago('efectivo',this)">
+              <div class="mpo-indicator" id="mpi-efectivo"></div>
+              <span class="mpo-icon">💵</span>
+              <div>
+                <span class="mpo-name">Efectivo</span>
+                <span class="mpo-sub">Al recibir</span>
+              </div>
+            </div>
+            <div class="mpo" id="mpo-nequi"      onclick="selMetodoPago('nequi',this)">
+              <div class="mpo-indicator" id="mpi-nequi"></div>
+              <span class="mpo-icon">
+                <svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="6" fill="#6C0CE0"/><text x="13" y="19" text-anchor="middle" font-family="Arial Black" font-size="11" font-weight="900" fill="white">N</text></svg>
+              </span>
+              <div>
+                <span class="mpo-name">Nequi</span>
+                <span class="mpo-sub">316 789 4532</span>
+              </div>
+            </div>
+            <div class="mpo" id="mpo-daviplata"  onclick="selMetodoPago('daviplata',this)">
+              <div class="mpo-indicator" id="mpi-daviplata"></div>
+              <span class="mpo-icon">
+                <svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="6" fill="#E30613"/><text x="13" y="18" text-anchor="middle" font-family="Arial Black" font-size="9" font-weight="900" fill="white">DV</text></svg>
+              </span>
+              <div>
+                <span class="mpo-name">Daviplata</span>
+                <span class="mpo-sub">316 789 4532</span>
+              </div>
+            </div>
+            <div class="mpo" id="mpo-transfer"   onclick="selMetodoPago('transfer',this)">
+              <div class="mpo-indicator" id="mpi-transfer"></div>
+              <span class="mpo-icon">🏦</span>
+              <div>
+                <span class="mpo-name">Transferencia</span>
+                <span class="mpo-sub">PSE / Banco</span>
+              </div>
+            </div>
+          </div>
+          <!-- Copy number -->
+          <div class="mp-copy-row" id="mpCopyRow" style="display:none">
+            <span id="mpCopyLabel">Número Nequi:</span>
+            <strong>316 789 4532</strong>
+            <button onclick="copiarNumero()">📋 Copiar</button>
+          </div>
+          <div class="mp-msg" id="mpMsg"></div>
+        </div>
+
+        <button class="btn-lucho full-lucho" onclick="confirmarPedido()">
+          🛵 Confirmar Pedido
+        </button>
+        <div class="wa-btn-wrap">
+          <a class="btn-wa-lucho" href="https://wa.me/573167894532" target="_blank">
+            <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL PEDIDO CONFIRMADO -->
+<div class="modal-lucho" id="modalPedido">
+  <div class="ml-box">
+    <div class="ml-header">🎉 ¡Pedido Recibido!</div>
+    <div class="ml-body">
+      <div class="ml-icon">🛵💨</div>
+      <h3>¡Ya va en camino!</h3>
+      <div class="ml-detalle" id="mlDetalle"></div>
+      <p class="ml-tiempo">⏱ Tiempo estimado: <strong>30–45 minutos</strong></p>
+      <button class="btn-lucho" onclick="cerrarModalPedido()">¡Gracias Don Lucho!</button>
+    </div>
+  </div>
+  <div class="ml-bg" onclick="cerrarModalPedido()"></div>
+</div>
+
+<!-- ══════════════════════════
+     NOSOTROS
+══════════════════════════ -->
+<section class="section-nosotros" id="nosotros">
+  <div class="container">
+    <div class="titulo-seccion">
+      <div class="ts-icono">👨‍🍳</div>
+      <h2>La Historia de Don Lucho</h2>
+    </div>
+    <div class="nosotros-layout">
+      <div class="nos-historia">
+        <div class="nh-decoracion">
+          <svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg" class="don-lucho-svg">
+            <!-- Fondo tipo foto polaroid -->
+            <rect x="10" y="10" width="260" height="280" rx="6" fill="#fffde8" stroke="#d4c090" stroke-width="2"/>
+            <!-- "Foto" interior -->
+            <rect x="22" y="22" width="236" height="220" rx="4" fill="#e8d890" opacity="0.5"/>
+            <!-- Personaje Don Lucho: cocinero colombiano -->
+            <!-- Gorro de cocinero -->
+            <rect x="95" y="40" width="90" height="45" rx="6" fill="white" stroke="#d4c090" stroke-width="1.5"/>
+            <rect x="85" y="82" width="110" height="14" rx="4" fill="white" stroke="#d4c090" stroke-width="1.5"/>
+            <!-- Cara -->
+            <ellipse cx="140" cy="120" rx="52" ry="54" fill="#c8913a"/>
+            <!-- Bigote frondoso característico -->
+            <path d="M115 132 Q128 140 140 136 Q152 140 165 132" fill="#5a3010" stroke="#3a1a08" stroke-width="1"/>
+            <path d="M115 132 Q120 126 128 130 Q134 133 140 132" fill="#5a3010"/>
+            <path d="M165 132 Q160 126 152 130 Q146 133 140 132" fill="#5a3010"/>
+            <!-- Ojos alegres -->
+            <ellipse cx="124" cy="112" rx="7" ry="8" fill="#3a2010"/>
+            <ellipse cx="156" cy="112" rx="7" ry="8" fill="#3a2010"/>
+            <circle cx="126" cy="110" r="2.5" fill="white"/>
+            <circle cx="158" cy="110" r="2.5" fill="white"/>
+            <!-- Sonrisa -->
+            <path d="M122 140 Q140 154 158 140" fill="none" stroke="#3a2010" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Mejillas -->
+            <ellipse cx="112" cy="128" rx="10" ry="7" fill="#e87050" opacity="0.35"/>
+            <ellipse cx="168" cy="128" rx="10" ry="7" fill="#e87050" opacity="0.35"/>
+            <!-- Cuerpo con delantal -->
+            <path d="M88 175 L92 270 L188 270 L192 175 Q170 165 140 163 Q110 165 88 175Z" fill="#2a8a4a"/>
+            <!-- Delantal -->
+            <rect x="110" y="175" width="60" height="90" rx="4" fill="white" stroke="#d4c090" stroke-width="1"/>
+            <text x="140" y="222" text-anchor="middle" font-family="'Kalam',cursive" font-size="10" fill="#c8300a">DON<br/>LUCHO</text>
+            <!-- Brazo izquierdo con salchipapa -->
+            <path d="M92 195 L65 210 Q60 218 65 224 L92 220" fill="#c8913a" stroke="#a07020" stroke-width="1"/>
+            <!-- Salchipapa en mano -->
+            <path d="M40 215 L50 185 L76 185 L86 215Z" fill="#e8c84a" stroke="#c8a030" stroke-width="1.5"/>
+            <rect x="47" y="170" width="8" height="22" rx="2" fill="#f0b832" transform="rotate(-5 51 181)"/>
+            <rect x="60" y="165" width="8" height="26" rx="2" fill="#e8a820" transform="rotate(2 64 178)"/>
+            <rect x="73" y="170" width="8" height="22" rx="2" fill="#f0b832" transform="rotate(8 77 181)"/>
+            <ellipse cx="64" cy="186" rx="15" ry="6" fill="#c83a2a" transform="rotate(-5 64 186)"/>
+            <!-- Caption -->
+            <text x="140" y="292" text-anchor="middle" font-family="'Kalam',cursive" font-size="12" fill="#8b6914">Don Lucho · 1994</text>
+          </svg>
+        </div>
+        <div class="nh-texto">
+          <h3>30 años echando sazón</h3>
+          <p>
+            Todo empezó en 1994 cuando Lucho Ríos puso un carrito en la esquina de la Cra 8 con 38, en el barrio Alameda de Cali. Su mamá le enseñó la receta de la papa: <em>frita en aceite de maíz, a la temperatura correcta, el tiempo exacto.</em>
+          </p>
+          <p>
+            Lo que nadie esperaba es que esa esquina se volvería el punto de encuentro del barrio. Estudiantes, obreros, familias enteras. La salchipapa de Don Lucho no es comida de calle — es <em>patrimonio cultural del barrio.</em>
+          </p>
+          <p>
+            Hoy seguimos en el mismo lugar, con la misma receta, el mismo sazón y las mismas ganas de darle rico a Cali. 🇨🇴
+          </p>
+          <div class="nh-firma">
+            <span class="nhf-firma">Don Lucho</span>
+            <span class="nhf-sub">Fundador · 1994</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fundadores reales -->
+      <div class="fundadores-lucho">
+        <div class="fl-titulo">El equipo de hoy</div>
+        <div class="fl-card">
+          <div class="fl-avatar" style="background:#e8c84a;border-color:#c8a030">JJ</div>
+          <div>
+            <strong>Jhon Jairo Parra</strong>
+            <span>Administrador & Fundador</span>
+            <p>"Continuamos el legado de Don Lucho con el mismo amor de siempre."</p>
+          </div>
+        </div>
+        <div class="fl-card">
+          <div class="fl-avatar" style="background:#c83a2a;border-color:#a02818">SB</div>
+          <div>
+            <strong>Sebastián Banguera</strong>
+            <span>Chef Principal & Co-Fundador</span>
+            <p>"La receta es secreta, pero el ingrediente principal siempre ha sido el amor."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="contacto-lucho">
+        <div class="cl-item"><i class="fas fa-map-marker-alt"></i><div><strong>Dirección</strong><p>Cra 8 #38-20, Barrio Alameda · Cali</p></div></div>
+        <div class="cl-item"><i class="fas fa-phone"></i><div><strong>Teléfono</strong><p>+57 316 789 4532</p></div></div>
+        <div class="cl-item"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><p>+57 316 789 4532</p></div></div>
+        <div class="cl-item"><i class="fab fa-instagram"></i><div><strong>Instagram</strong><p>@donluchocali</p></div></div>
+        <div class="cl-item"><i class="fas fa-clock"></i><div><strong>Horario</strong><p>Lun–Dom: 12PM – 11PM<br/>Domicilios: 12PM – 10:30PM</p></div></div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="mapa-lucho">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127500!2d-76.5225!3d3.4516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1680000000000" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-lucho">
+  <div class="fl-inner">
+    <div class="fl-brand">
+      <span>🍟</span>
+      <div>
+        <div class="fl-name">DON LUCHO</div>
+        <div class="fl-sub">La Salchipapería · Cali · Est. 1994</div>
+      </div>
+    </div>
+    <p class="fl-frase">"Treinta años friendo papas con amor.<br/>Y los que faltan."</p>
+    <div class="fl-social">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="fl-copy">© 2024 Don Lucho Salchipapería · Cali, Valle del Cauca 🇨🇴<br/>
+    <span>Hecho con 🍟 y mucho amor por el barrio</span></div>
+  </div>
+</footer>
+
+<script src="donlucho.js"></script>
+</body>
+</html>
